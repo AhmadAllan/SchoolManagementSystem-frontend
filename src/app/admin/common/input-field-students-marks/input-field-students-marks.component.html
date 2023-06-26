@@ -1,0 +1,46 @@
+<fieldset>
+    <legend>Add Person</legend>
+    <form class="formBox" [formGroup]="form">
+        <p class="error-message" style="font-size: large;" *ngIf="isSubmitted">Please fill the the form</p>
+        <div class="leftSide">
+            <div class="input">
+                <p>Full Name</p>
+                <input type="text" class="textInput" [class.error]="fullNameValid" formControlName="fullName">
+                <p class="error-message" *ngIf="fullNameValid" >please enter the student full name</p>
+            </div>
+            <div class="input">
+                <p>Quizzes Name</p>
+                <input type="text" class="textInput" [class.error]="quizzesValid" formControlName="quizzes">
+                <p class="error-message" *ngIf="quizzesValid">please enter the student Quizzes</p>
+            </div>
+            <div class="input">
+                <p>Midterm</p>
+                <input type="text" class="textInput" [class.error]="midtermValid"  formControlName="midterm">
+                <p class="error-message" *ngIf="midtermValid">please enter the midterm marks</p>
+            </div>
+            <div class="input">
+                <p>Final</p>
+                <input type="text" class="textInput" [class.error]="finalValid"  formControlName="final">
+                <p class="error-message" *ngIf="finalValid">please enter the student class</p>
+            </div>
+            <div class="input">
+                <p>Materail</p>
+                <input type="text" class="textInput" [class.error]="materaiValid"  formControlName="materail">
+                <p class="error-message" *ngIf="finalValid">please enter the materail id</p>
+            </div>
+            <div class="input">
+                <p>Materail</p>
+                <input type="text" class="textInput" [class.error]="studentValid"  formControlName="student">
+                <p class="error-message" *ngIf="finalValid">please enter the student id</p>
+            </div>
+        </div>
+
+        <div class="rightSide">
+            <img src="../../../../assets/icons/student-add.png" alt="Add Student">
+            <div class="btns">
+                <button class="btnPrimary add" (click)="onClick()"><fa-icon [icon]="faAdd"></fa-icon> Add</button>
+                <button class="btnPrimary cancel" (click)="onClose()"><fa-icon [icon]="faXmark"></fa-icon> Cancel</button>
+            </div>
+        </div>
+    </form>
+</fieldset>

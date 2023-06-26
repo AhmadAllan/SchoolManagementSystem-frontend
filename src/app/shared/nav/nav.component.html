@@ -1,0 +1,59 @@
+<div class="container">
+    <nav class="navBar">
+        <button (click)="onClick()" class="bars">
+            <fa-icon [icon]="faBars" size="xl" style="color: white;"></fa-icon>
+        </button>
+
+        <div class="profile" (click)="onPress()">
+            <div class="image">
+                <fa-icon [icon]="faUser" size="xl" style="color: white;"></fa-icon>
+            </div>
+            <div class="info">
+                <fa-icon [icon]="faCaretDown" style="color: white;"></fa-icon>
+            </div>
+        </div>
+    </nav>
+    <div class="profileDropmenu" *ngIf="isVisiableProfile">
+        <ul>
+            <li routerLink="profile">
+                <fa-icon [icon]="faUser" style="color: white;"></fa-icon>profile
+            </li>
+            <li routerLink="message">
+                <fa-icon [icon]="faMessage" style="color: white;"></fa-icon>messages
+                
+            </li>
+            <li>
+                <fa-icon [icon]="faRightFromBracket" style="color: white;"></fa-icon>logout
+            </li>
+        </ul>
+    </div>
+    <nav class="navSlider" [ngClass]="{'open': isVisibleNavSlider}">
+        <ul id="items-menu">
+            <!-- Admin Module -->
+            
+            <li *ngIf="activeModule === 'admin'" class="flex-item dashboard" routerLink="/admin/dashboard" [ngClass]="{'active': activeNav === '/admin/dashboard'}">Dashboard</li>
+            <li *ngIf="activeModule === 'admin'" class="flex-item admins" routerLink="/admin/admins" [ngClass]="{'active': activeNav === '/admin/admins'}">Admins</li>
+            <li *ngIf="activeModule === 'admin'" class="flex-item parents" routerLink="/admin/parents" [ngClass]="{'active': activeNav === '/admin/parents'}">Parents</li>
+            <li *ngIf="activeModule === 'admin'" class="flex-item teachers" routerLink="/admin/teachers" [ngClass]="{'active': activeNav === '/admin/teachers'}">Teachers</li>
+            <li *ngIf="activeModule === 'admin'" class="flex-item students-info" routerLink="/admin/studentsInfo" [ngClass]="{'active': activeNav === '/admin/studentsInfo'}">Students Info</li>
+            <li *ngIf="activeModule === 'admin'" class="flex-item students-marks" routerLink="/admin/studentsMarks" [ngClass]="{'active': activeNav === '/admin/studentsMarks'}">Students Marks</li>
+            <li *ngIf="activeModule === 'admin'" class="flex-item class-rooms" routerLink="/admin/classrooms" [ngClass]="{'active': activeNav === '/admin/classrooms'}">Classrooms</li>
+            <li *ngIf="activeModule === 'admin'" class="flex-item schedule" routerLink="/admin/schedule" [ngClass]="{'active': activeNav === '/admin/schedule'}">Schedule</li>
+
+
+            <!-- Parent Module -->
+            <li *ngIf="activeModule === 'parent'" class="flex-item home" routerLink="/parent/home" [ngClass]="{'active': activeNav === '/parent/home'}">Home</li>
+            <li *ngIf="activeModule === 'parent'" class="flex-item performance" routerLink="/parent/performance" [ngClass]="{'active': activeNav === '/parent/performance'}">Performance</li>
+            <li *ngIf="activeModule === 'parent'" class="flex-item marks" routerLink="/parent/marks" [ngClass]="{'active': activeNav === '/parent/marks'}">Marks</li>
+
+            <!-- Student Module -->
+            <li *ngIf="activeModule === 'student'" class="flex-item home" routerLink="/student/home" [ngClass]="{'active': activeNav === '/student/home'}">Home</li>
+            <li *ngIf="activeModule === 'student'" class="flex-item courses" routerLink="/student/courses" [ngClass]="{'active': activeNav === '/student/courses'}">Courses</li>
+            <li *ngIf="activeModule === 'student'" class="flex-item marks" routerLink="/student/marks" [ngClass]="{'active': activeNav === '/student/marks'}">Marks</li>
+
+            <!-- Teacher Module -->
+            <li *ngIf="activeModule === 'teacher'" class="flex-item home" routerLink="/teacher/home" [ngClass]="{'active': activeNav === '/teacher/home'}">Home</li>
+            <li *ngIf="activeModule === 'teacher'" class="flex-item courses" routerLink="/teacher/courses" [ngClass]="{'active': activeNav === '/teacher/courses'}">Courses</li> 
+        </ul>
+    </nav>
+</div>

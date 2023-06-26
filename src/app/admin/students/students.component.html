@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Students information</h1>
+    <table class="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>User name</th>
+                <th>Email</th>
+                <th>Grade</th>
+                <th>Classroom</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <th>{{student.studentId}}</th>
+                <th>{{student.name}}</th>
+                <th>{{student.userName}}</th>
+                <th>{{student.email}}</th>
+                <th>{{student.grade}}</th>
+                <th>{{student.classroom}}</th>
+                <th><button class="btnSecondary" (click)="onDelete(student.studentId)"> <fa-icon [icon]="faTrash"></fa-icon> Delete</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btnPrimary" (click)="onToggle()"><fa-icon [icon]="faAdd"></fa-icon> Add</button>
+    <app-input-field-students *ngIf="isVisiable" [isVisiable]="isVisiable" (sendVisiable)="handleBooleanVisiable($event)"  (sendSubmit)="handleBooleanSubmit($event)" (studentAdded)="getStudentsList"></app-input-field-students>
+</div>

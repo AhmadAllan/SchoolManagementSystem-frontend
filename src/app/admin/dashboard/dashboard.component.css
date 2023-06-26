@@ -1,0 +1,124 @@
+.container {
+    padding: 10px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    border-left: 3px solid var(--secondary-color);
+    margin-top: 10px;
+    padding-left: 10px;
+}
+/* Cards style */
+table, tr, th, td {
+    border-collapse: collapse;
+    border: none;
+    color: black;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.card {
+    width: 20%; 
+    border: 2px solid var(--border-color);
+    border-top: 3px solid var(--secondary-color);
+    border-radius: 3px;
+    color: black;
+}
+
+.card tr:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+.card tr:last-child td, th {
+    border-top: 2px solid var(--border-color);
+    display: flex;
+    padding-left: 10px;
+}
+
+p.heading {
+    color: var(--primary-color);
+}
+
+.card img {
+    padding: 5px;
+    width: 50px;
+}
+
+/* Announcements Style */
+.announcements{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.announcements .btnSecondary{
+    align-self: flex-end;
+    font-size: large;
+}
+
+.announcement{
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 157px;
+    gap: 10px;
+    background-color: #f2f2f2;
+}
+.announcement h2 {
+    margin-top: 0;
+}
+
+div.image img {
+    width: 300px;
+}
+
+.post {
+    max-height: 150px;
+    overflow-y:scroll;
+    text-overflow:ellipsis;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    table{
+        font-size: small;
+        width: 45%;
+    }
+
+    /* Announcements Style */       
+    .announcement{
+        height: 157px;
+        display: flex;
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        gap: 10px;
+        background-color: #f2f2f2;
+    }
+    .announcement h2 {
+        margin-top: 0;
+    }
+    
+    div.image img {
+        width: 150px;
+    }
+    
+    .post {
+        max-height: 150px;
+        overflow-y:scroll;
+        text-overflow:ellipsis;
+    }
+}
+

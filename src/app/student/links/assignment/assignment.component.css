@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px;
+}
+
+h1 {
+    color: var(--primary-color);
+    border-left: 3px solid var(--secondary-color);
+    margin-top: 10px;
+    padding-left: 10px;
+    color: black;
+}
+
+h2{
+    color: black;
+}
+
+/* Header */
+div.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid lightgray;
+    padding-left: 20px;
+}
+
+button.back {
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+}
+
+button.back:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+/* body */
+div.body {
+    height: 90%;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+/* assignment */
+div.assignment {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.opened, .due {
+    display: flex;
+    gap: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.info {
+    padding-top: 20px;
+    width: 70%;
+}
+
+/* upload */
+.upload h2 {
+    margin-bottom: 10px;
+}
+
+.upload-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.upload-form label {
+    font-weight: bold;
+}
+
+.upload-form input[type="file"] {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+    height: 300px;
+}
+
+.upload-form button[type="submit"] {
+    background-color: var(--primary-color);
+    width: 200px;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.upload-form button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}

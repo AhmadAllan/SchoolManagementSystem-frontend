@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px;
+}
+
+h1 {
+    color: var(--primary-color);
+    border-left: 3px solid var(--secondary-color);
+    margin-top: 10px;
+    padding-left: 10px;
+    color: var(--primary-color);
+}
+
+tbody tr > * {
+    padding: 5px;
+}

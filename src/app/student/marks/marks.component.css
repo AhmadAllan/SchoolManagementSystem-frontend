@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px;
+    height: 100%;
+}
+
+h1 {
+    color: var(--primary-color);
+    border-left: 3px solid var(--secondary-color);
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* subject item */
+.subject-item {
+    padding: 10px;
+}
+
+select {
+    padding: 5px;
+    margin-left: 10px;
+    font-size: medium;
+}
+
+/* Subject-table */
+.subject-table {
+    padding-left: 10px;
+}
+.subject-table table {
+    width: 100%;
+}
+
+td, th {
+    padding: 10px 5px;
+}
+  

@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    border-left: 3px solid var(--secondary-color);
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* Courses */
+div.courses {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+div.course {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+}
+
+div.course:nth-child(even){
+    background-color: var(--table-row-color);
+}
+
+fa-icon {
+    padding-right: 10px;
+}
+
+div.course .courseLink {
+    font-size: x-large;
+}
+
+div.course p {
+    color: black;
+}

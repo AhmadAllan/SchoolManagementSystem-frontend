@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px;
+}
+
+h1 {
+    color: var(--primary-color);
+    border-left: 3px solid var(--secondary-color);
+    margin-top: 10px;
+    padding-left: 10px;
+    color: black;
+}
+
+h2{
+    color: black;
+}
+
+/* Header */
+div.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid lightgray;
+    padding-left: 20px;
+}
+
+button.back {
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+}
+
+button.back:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+/* body */
+div.body {
+    height: 90%;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+/* boxs */
+div.boxs {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+/* box */
+div.box {
+    padding: 10px;
+}
+
+div.box p {
+    color: black;
+}
+
+div.box fa-icon {
+    color: black;
+    padding-right: 10px;
+}

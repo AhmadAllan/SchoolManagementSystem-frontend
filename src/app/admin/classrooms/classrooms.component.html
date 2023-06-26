@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Classrooms</h1>
+    <table class="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Class</th>
+                <th>Grade</th>
+                <th>Floor</th>
+                <th>Number of student</th>
+                <th>Class supervisor</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let classroom of classrooms">
+                <td>{{classroom.classroomId}}</td>
+                <td>{{classroom.className}}</td>
+                <td>{{classroom.gradeLevel}}</td>
+                <td>{{classroom.location}}</td>
+                <td>{{classroom.capacity}}</td>
+                <td>{{classroom.supervisorId}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

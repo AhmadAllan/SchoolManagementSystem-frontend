@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Parents</h1>
+    <table class="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>User name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+            <tr *ngFor="let parent of parents">
+                <th>{{parent.parentId}}</th>
+                <th>{{parent.name}}</th>
+                <th>{{parent.userName}}</th>
+                <th>{{parent.email}}</th>
+                <th>{{parent.phoneNumber}}</th>
+                <th>{{parent.address}}</th>
+                <th><button class="btnSecondary" (click)="onDelete(parent.parentId)"> <fa-icon [icon]="faTrash"></fa-icon> Delete</button></th>
+            </tr>
+        <tbody>
+    </table>
+    <button class="btnPrimary" (click)="onToggle()"><fa-icon [icon]="faAdd"></fa-icon> Add</button>
+    <app-input-field-parents *ngIf="isVisiable" [isVisiable]="isVisiable" (sendVisiable)="handleBooleanVisiable($event)"  (sendSubmit)="handleBooleanSubmit($event)" (parentAdded)="getParentsList()"></app-input-field-parents>
+</div>

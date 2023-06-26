@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>Child's Performance</h1>
+    <section class="marks">
+        <h2>Marks</h2>
+        <table>
+            <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Grade</th>
+                  <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let grade of grades">
+                    <td>{{ grade.subject }}</td>
+                    <td>{{ grade.grade }}</td>
+                    <td><button (click)="showDetails(grade.subject)">More Details</button></td>
+                  </tr>
+            </tbody>
+          </table>
+    </section>
+
+    <section class="details" *ngIf="selectedSubject">
+        <h2>Grade Details</h2>
+        <div>{{ getGradeDetails(selectedSubject) }}</div>
+    </section>
+    
+    <section class="attendance">
+        <h2>Attendance Records</h2>
+        <ul>
+            <li>May 1st: Present</li>
+            <li>May 2nd: Absent</li>
+            <li>May 3rd: Present</li>
+          </ul>
+    </section>
+
+    <section class="teacherNotes">
+        <h2>Teacher Notes</h2>
+        <ul>
+            <li>Math: Good progress, needs to work on problem-solving skills.</li>
+            <li>English: Excellent participation in class discussions.</li>
+            <li>Science: Needs improvement in submitting assignments on time.</li>
+        </ul>
+    </section>
+</div>

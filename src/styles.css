@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import './variables.css';
+
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+/* Buttons */
+
+button:hover{
+    cursor: pointer;
+}
+.btnPrimary {
+    width: 200px;
+    padding: 10px;
+    gap: 10px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+}
+
+.btnSecondary {
+    gap: 10px;
+    width: fit-content;
+    padding:8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+/*  error input style */
+input.error {
+    border: 2px solid red;
+}
+  
+.error-message {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: red;
+    font-size: 12px;
+}
+
+/* Table */
+
+table, tr, th, td {
+    border-collapse: collapse;
+    border: 2px solid var(--table-border-color);
+    color: var(--table-text-color);
+}
+
+td{
+    padding-left: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+table thead {
+    background-color: var(--table-row-color);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ebebeb;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: white;
+}

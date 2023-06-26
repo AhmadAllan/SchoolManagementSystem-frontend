@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="header">
+        <button class="back" (click)="onClick()">
+            <fa-icon  [icon]="faArrowLeft" style="color: black;" size="xl"></fa-icon>
+        </button>
+        <h2>2023-Math-10-A</h2>
+    </div>
+
+    <div class="body">
+        <div class="assignments boxs">
+            <h2>Assignments</h2>
+            <div class="assignment box">
+                <fa-icon [icon]="faBook"></fa-icon>
+                <a routerLink="assignment">Assignment 1</a>
+            </div>
+            <div class="assignment box">
+                <fa-icon [icon]="faBook"></fa-icon>
+                <a routerLink="assignment">Assignment 1</a>
+            </div>
+        </div>
+
+        <div class="quizzes boxs">
+            <h2>Quizzes</h2>
+            <div class="quiz box">
+                <fa-icon [icon]="faQuestion"></fa-icon>
+                <a routerLink="quiz">Quiz 1</a>
+            </div>
+            <div class="quiz box">
+                <fa-icon [icon]="faQuestion"></fa-icon>
+                <a routerLink="quiz">Quiz 2</a>
+            </div>
+        </div>
+
+        <div class="notes boxs">
+            <h2>Notes</h2>
+            <div class="note box">
+                <fa-icon [icon]="faNoteSticky"></fa-icon>
+                <p>Student 15/5/2023 class is Onlne</p>
+                <p class="post">post at 2023/5/15 08:30 AM</p>
+            </div>
+            <div class="note box">
+                <fa-icon [icon]="faNoteSticky"></fa-icon>
+                <p>Student 15/5/2023 class is Onlne</p>
+                <p class="post">post at 2023/5/15 08:30 AM</p>
+            </div>
+        </div>
+    </div>
+</div>

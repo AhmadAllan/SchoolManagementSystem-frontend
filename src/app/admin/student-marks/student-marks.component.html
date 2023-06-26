@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Students Makrs</h1>
+    <table class="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Quizzes</th>
+                <th>Midterm</th>
+                <th>Final</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ahmad Allan</td>
+                <td>20 / 20</td>
+                <td>30 / 30</td>
+                <td>50 / 50</td>
+                <th><button class="btnSecondary"> <fa-icon [icon]="faEdit"></fa-icon> edit</button></th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ahmad Allan</td>
+                <td>20 / 20</td>
+                <td>30 / 30</td>
+                <td>50 / 50</td>
+                <th><button class="btnSecondary"> <fa-icon [icon]="faEdit"></fa-icon> edit</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btnPrimary" (click)="onToggle()"><fa-icon [icon]="faAdd"></fa-icon> Add</button>
+    <app-input-field-students-marks *ngIf="isVisiable" [isVisiable]="isVisiable" (sendVisiable)="handleBooleanVisiable($event)"  (sendSubmit)="handleBooleanSubmit($event)" (markAdded)="getMarksList"></app-input-field-students-marks>
+</div>

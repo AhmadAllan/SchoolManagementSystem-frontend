@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="header">
+        <button class="back" (click)="onClick()">
+            <fa-icon  [icon]="faArrowLeft" style="color: black;" size="xl"></fa-icon>
+        </button>
+        <h2>2023-Math-10-A</h2>
+    </div>
+
+    <div class="body">
+        <div class="assignment">
+            <h2>Assignments</h2>
+            <div class="opened">
+                <p class="bold">Opened:</p>
+                <p class="light">Tuesday, 28 March 2023, 12:00 AM </p>
+            </div>
+            <div class="due">
+                <p class="bold">Due:</p>
+                <p class="light">Saturday, 20 May 2023, 12:00 AM </p>
+            </div>
+        </div>
+        <div class="upload">
+            <h2>Upload Files</h2>
+            <p class="info">Qui commodo est aute exercitation dolor deserunt esse pariatur occaecat minim esse deserunt et. Enim pariatur amet est officia minim deserunt exercitation voluptate anim. Excepteur officia reprehenderit ad consectetur id ut veniam cillum exercitation.</p>
+            <div class="upload-form">
+                <form>
+                    <div class="upload-box">
+                        <label for="file">Select file:</label>
+                        <input type="file" id="file" name="file">
+                        <!-- <div class="file-preview">
+                            <a *ngIf="filePreview" [href]="filePreview" target="_blank">
+                              <i class="fa fa-file-pdf"></i>
+                              <span>{{ uploadedFileName }}</span>
+                            </a>
+                            <img *ngIf="!isPdfFile(uploadedFileName)" [src]="filePreview" alt="File Preview">
+                        </div> -->
+                    </div>
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </div>  
+    </div>
+</div>

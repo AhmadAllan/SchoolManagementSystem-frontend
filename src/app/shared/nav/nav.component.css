@@ -1,0 +1,123 @@
+@import '../../../variables.css';
+
+*{
+  box-sizing: border-box;
+  color: white;
+}
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav.navBar{
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 50px;
+}
+
+.bars {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 107, 100, 0.5);
+  border: none;
+}
+
+.bars:hover {
+  cursor: pointer;
+  background-color: rgba(0, 94, 87, 0.5);
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  margin-left: auto;
+}
+
+.profile:hover {
+  cursor: pointer;
+  background-color: rgba(0, 94, 87, 0.5);
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 94, 87, 0.5);
+  border-radius: 30px;
+}
+
+/* profileDropmenu */
+.profileDropmenu {
+  position: absolute;
+  right: 0;
+  background-color: var(--primary-color);
+  width: 150px;
+}
+
+.profileDropmenu ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.profileDropmenu ul li {
+  padding: 5px;
+  font-size: medium;
+  font-weight: normal;
+}
+
+.profileDropmenu ul li:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.profileDropmenu fa-icon {
+  padding-right: 5px;
+}
+
+/* nav slider */
+.navSlider {
+  position: absolute;
+  left: -300px;
+  width: 300px;
+  background-color: var(--primary-color);
+  height: calc(100vh - 50px);
+  transition: left 0.7s ease;
+  overflow-y: auto;
+}
+
+.navSlider.open {
+  left: 0;
+}
+
+.navSlider img{
+  width: 20px;
+}
+
+.navSlider ul{
+  list-style: none;
+  padding: 0;
+}
+
+.navSlider li {
+  padding: 10px;
+}
+
+.navSlider li:hover, .active {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}

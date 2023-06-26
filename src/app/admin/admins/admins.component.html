@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Admins</h1>
+    <table class="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>User name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let admin of admins">
+                <th>{{admin.adminId}}</th>
+                <th>{{admin.name}}</th>
+                <th>{{admin.userName}}</th>
+                <th>{{admin.email}}</th>
+                <th>{{admin.phoneNumber}}</th>
+                <th>{{admin.address}}</th>
+                
+                <th><button class="btnSecondary" (click)="onDelete(admin.adminId)"> <fa-icon [icon]="faTrash"></fa-icon> Delete</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btnPrimary" (click)="onToggle()"><fa-icon [icon]="faAdd"></fa-icon> Add</button>
+    <app-input-field-admins *ngIf="isVisiable" [isVisiable]="isVisiable" (sendVisiable)="handleBooleanVisiable($event)"  (sendSubmit)="handleBooleanSubmit($event)" (adminAdded)="getAdminsList()"></app-input-field-admins>
+</div>

@@ -1,0 +1,46 @@
+<section>
+    <h2>Profile Information</h2>
+    <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" [(ngModel)]="fullName" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="email" />
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" [(ngModel)]="phone" />
+    </div>
+    <button class="save-btn" (click)="saveProfile()">Save</button>
+</section>
+
+<section>
+    <h2>Contact Details</h2>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" [(ngModel)]="address"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" [(ngModel)]="city" />
+    </div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" [(ngModel)]="country" />
+    </div>
+    <button class="save-btn" (click)="saveContactDetails()">Save</button>
+</section>
+
+<section>
+    <h2>Notification Preferences</h2>
+    <div class="form-group">
+        <label for="emailNotifications">Email Notifications</label>
+        <input type="checkbox" id="emailNotifications" [(ngModel)]="emailNotifications" />
+    </div>
+    <div class="form-group">
+        <label for="smsNotifications">SMS Notifications</label>
+        <input type="checkbox" id="smsNotifications" [(ngModel)]="smsNotifications" />
+    </div>
+    <button class="save-btn" (click)="saveNotificationPreferences()">Save</button>
+</section>

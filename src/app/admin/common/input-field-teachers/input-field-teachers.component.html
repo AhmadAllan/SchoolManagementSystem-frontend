@@ -1,0 +1,62 @@
+
+<fieldset>
+    <legend>Add Person</legend>
+    <form class="formBox" [formGroup]="form">
+        <p class="error-message" style="font-size: large;" *ngIf="isSubmitted">Please fill the the form</p>
+        <div class="leftSide">
+            <div class="input">
+                <p>Name</p>
+                <input type="text" class="textInput" [class.error]="nameValid" formControlName="name">
+                <p class="error-message" *ngIf="nameValid" >please enter your name</p>
+            </div>
+            <div class="input">
+                <p>User Name</p>
+                <input type="text" class="textInput" [class.error]="userNameValid"  formControlName="userName">
+                <p class="error-message" *ngIf="userNameValid">please enter your user name</p>
+            </div>
+            <div class="input">
+                <p>Phone Number</p>
+                <input type="text" class="textInput" placeholder="079XXXXXXX" [class.error]="phoneValid" formControlName="phone">
+                <p class="error-message" *ngIf="phoneValid">please enter your phone number correct</p>
+            </div>
+            <div class="input">
+                <p>email</p>
+                <input type="text" class="textInput" [class.error]="emailValid" formControlName="email">
+                <p class="error-message" *ngIf="emailValid">please enter your email</p>
+            </div>
+            <div class="input">
+                <p>Address</p>
+                <input type="text" class="textInput" [class.error]="addressValid" formControlName="address">
+                <p class="error-message" *ngIf="addressValid">please enter your address</p>
+            </div>
+            <!-- <div class="input">
+                <p>Class</p>
+                <input type="text" class="textInput" [class.error]="classValid"  formControlName="class">
+                <p class="error-message" *ngIf="classValid">please enter the teacher class</p>
+            </div>
+            <div class="input">
+                <p>Material</p>
+                <input type="text" class="textInput" [class.error]="materialValid" formControlName="material">
+                <p class="error-message" *ngIf="materialValid">please enter the teacher metrial</p>
+            </div> -->
+            <div class="input">
+                <p>Password</p>
+                <input type="password" class="textInput" [class.error]="passwordVaild" formControlName="password">
+                <p class="error-message" *ngIf="passwordVaild">please enter your password</p>
+            </div>
+            <div class="input">
+                <p>Password Confirmation</p>
+                <input type="password" class="textInput" [class.error]="passwordConfirmValid" formControlName="passwordConfirm">
+                <p class="error-message" *ngIf="passwordConfirmValid">this does not match your entered password</p>
+            </div>
+        </div>
+
+        <div class="rightSide">
+            <img src="../../../../assets/icons/teacher-add.png" alt="Add Student">
+            <div class="btns">
+                <button class="btnPrimary add" (click)="onClick()"><fa-icon [icon]="faAdd"></fa-icon> Add</button>
+                <button class="btnPrimary cancel" (click)="onClose()"><fa-icon [icon]="faXmark"></fa-icon> Cancel</button>
+            </div>
+        </div>
+    </form>
+</fieldset>

@@ -1,0 +1,74 @@
+<div class="container">
+    <h1>Marks</h1>
+    <div class="subject-item">
+        <label for="subject">Choose a subject:</label>
+        <select name="subject" [(ngModel)]="subject" (change)="onSelect()">
+            <option default value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="biology">Biology</option>
+            <option value="chemistry">Chemistry</option>
+        </select>
+    </div>
+    <div class="subject-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mark item</th>
+                    <th>Calculated weight</th>
+                    <th>Mark</th>
+                    <th>Range</th>
+                    <th>Percentage</th>
+                    <th>Feedback</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6">
+                        <fa-icon [icon]="faFolder"></fa-icon>
+                        <span> 2023-Math-10-A</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quiz</td>
+                    <td>10%</td>
+                    <td>8</td>
+                    <td>0-10</td>
+                    <td>80%</td>
+                    <td>Keep up the good work</td>
+                </tr>
+                <tr>
+                    <td>assignment</td>
+                    <td>10%</td>
+                    <td>8</td>
+                    <td>0-10</td>
+                    <td>80%</td>
+                    <td>Keep up the good work</td>
+                </tr>
+                <tr>
+                    <td>midterm</td>
+                    <td>30%</td>
+                    <td>25</td>
+                    <td>0-30</td>
+                    <td>83.3%</td>
+                    <td>Keep up the good work</td>
+                </tr>
+                <tr>
+                    <td>final</td>
+                    <td>50%</td>
+                    <td>40</td>
+                    <td>0-50</td>
+                    <td>80%</td>
+                    <td>Keep up the good work</td>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        <p>total marks = 81 / 100</p>
+                    </th>
+                    <th colspan="3">
+                        <p>total percentage = 100%</p>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

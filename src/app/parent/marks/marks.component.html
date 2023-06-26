@@ -1,0 +1,56 @@
+<div class="container">
+    <h1>Marks</h1>
+    <section class="marks">
+        <h2>Assignment Marks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let assignment of assignments">
+                    <td>{{ assignment.name }}</td>
+                    <td>{{ assignment.score }} / 10</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="marks">
+        <h2>Quiz Marks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Quiz</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let quiz of quizzes">
+                    <td>{{ quiz.name }}</td>
+                    <td>{{ quiz.score }} / 10</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="marks">
+        <h2>Exam Marks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exam</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let exam of exams">
+                    <td>{{ exam.name }}</td>
+                    <td>{{ exam.score }} / -</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
